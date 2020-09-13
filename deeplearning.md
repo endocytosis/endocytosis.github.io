@@ -7,4 +7,11 @@ title: Deep Learning
 
 **This is a test** of markdown. 
 
-How does it work?
+## Projects 
+
+## RSNA-STR Pulmonary Embolism Detection 
+## OSIC Pulmonary Fibrosis Progression 
+## Mechanisms of Action (MoA) Prediction 
+
+
+
