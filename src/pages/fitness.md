@@ -65,3 +65,7 @@ title: "Fitness"
     </tbody>
   </table>
   </div>
+
+<h1>Exercise Protocols</h1>
+<h2>Norwegian 4x4</h2>
+<p>Four, 4-minute intervals, each at 85-95% HR max, followed by 3 minutes of recovery</p>
