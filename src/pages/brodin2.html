@@ -64,6 +64,11 @@
           <td>1599</td>
           <td>220</td>
           <td>13</td>
+
+                  
+       
+       
+
         </tr>
         <tr>
           <th scope="row">Corey</th>
@@ -90,19 +95,7 @@
           <td>1641</td>
           <td>122</td>
           <td>17</td>
-        </tr>
-        <tr>
-          <th scope="row">Hyllarie</th>
-          <td>692/89/12</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>692</td>
-          <td>89</td>
-          <td>12</td>
+  
         </tr>
         </tbody>
       </table>
@@ -129,7 +122,7 @@
     <h1 class="display-4 fw-bold text-body-emphasis">50,000 Calorie Progress &#127947;</h1>
     <div class="col-lg-6 mx-auto">
       <div class="progress">
-        <div id="calorieProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
   </div>
@@ -139,7 +132,7 @@
     <h1 class="display-4 fw-bold text-body-emphasis">5,000 Exercise Minutes &#128267;</h1>
     <div class="col-lg-6 mx-auto">
       <div class="progress">
-        <div id="exerciseProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
   </div>
@@ -172,8 +165,8 @@
       `;
 
       // Update progress bars
-      const calorieProgress = document.getElementById("calorieProgressBar");
-      const exerciseProgress = document.getElementById("exerciseProgressBar");
+      const calorieProgress = document.querySelector(".px-4:nth-child(6) .progress-bar");
+      const exerciseProgress = document.querySelector(".px-4:nth-child(8) .progress-bar");
       const calorieTarget = 50000; // Target calorie
       const exerciseTarget = 5000; // Target exercise minutes
 
@@ -183,9 +176,9 @@
 
       // Update progress bar styles
       calorieProgress.style.width = `${caloriePercentage}%`;
-      calorieProgress.setAttribute("aria-valuenow", Math.min(caloriePercentage, 100)); // Make sure it doesn't exceed 100
+      calorieProgress.setAttribute("aria-valuenow", caloriePercentage);
       exerciseProgress.style.width = `${exercisePercentage}%`;
-      exerciseProgress.setAttribute("aria-valuenow", Math.min(exercisePercentage, 100)); // Make sure it doesn't exceed 100
+      exerciseProgress.setAttribute("aria-valuenow", exercisePercentage);
     }
 
     // Call the updateGroupTotal function initially
