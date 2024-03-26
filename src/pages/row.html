@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rowing Machine Animation</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  #container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  .rower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rower {
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+  .rower .handle {
+    width: 20px;
+    height: 120px;
+    background-color: #333;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+  table {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  table td {
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div class="rower-container">
+    <div class="rower" id="rower40">
+      <div class="handle"></div>
+    </div>
+    <div>40 strokes/min</div>
+  </div>
+  
+  <div class="rower-container">
+    <div class="rower" id="rower50">
+      <div class="handle"></div>
+    </div>
+    <div>50 strokes/min</div>
+  </div>
+  
+  <div class="rower-container">
+    <div class="rower" id="rower150">
+      <div class="handle"></div>
+    </div>
+    <div>150 strokes/min</div>
+  </div>
+  
+  <div class="rower-container">
+    <div class="rower" id="rower200">
+      <div class="handle"></div>
+    </div>
+    <div>200 strokes/min</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+  // Animation for 40 strokes/min
+  const rower40 = document.getElementById('rower40');
+  gsap.to(rower40.querySelector('.handle'), {
+    duration: 1,
+    y: -100,
+    yoyo: true,
+    repeat: -1
+  });
+
+  // Animation for 50 strokes/min
+  const rower50 = document.getElementById('rower50');
+  gsap.to(rower50.querySelector('.handle'), {
+    duration: 0.8,
+    y: -100,
+    yoyo: true,
+    repeat: -1
+  });
+
+  // Animation for 150 strokes/min
+  const rower150 = document.getElementById('rower150');
+  gsap.to(rower150.querySelector('.handle'), {
+    duration: 0.4,
+    y: -100,
+    yoyo: true,
+    repeat: -1
+  });
+
+  // Animation for 200 strokes/min
+  const rower200 = document.getElementById('rower200');
+  gsap.to(rower200.querySelector('.handle'), {
+    duration: 0.3,
+    y: -100,
+    yoyo: true,
+    repeat: -1
+  });
+</script>
+
+</body>
+</html>
