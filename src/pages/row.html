@@ -79,6 +79,13 @@
     </div>
     <div>200 strokes/min</div>
   </div>
+  
+  <div class="rower-container">
+    <div class="rower" id="rower300">
+      <div class="handle"></div>
+    </div>
+    <div>300 strokes/min</div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -114,6 +121,15 @@
   const rower200 = document.getElementById('rower200');
   gsap.to(rower200.querySelector('.handle'), {
     duration: 0.3,
+    y: -100,
+    yoyo: true,
+    repeat: -1
+  });
+
+  // Animation for 300 strokes/min
+  const rower300 = document.getElementById('rower300');
+  gsap.to(rower300.querySelector('.handle'), {
+    duration: 0.25,
     y: -100,
     yoyo: true,
     repeat: -1
