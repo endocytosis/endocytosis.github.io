@@ -34,7 +34,7 @@
   <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold text-body-emphasis">Brodin's Challenge &#129380;</h1>
     <div class="col-lg-6 mx-auto">
-      <table class="table table-dark">
+      <table class="table table-dark" id="challengeTable">
         <thead>
         <tr>
           <th scope="col">Name</th>
@@ -170,14 +170,28 @@
       // Loop through each row of the table to sum individual data
       document.querySelectorAll("tbody tr").forEach(function(row) {
         const rowData = row.querySelectorAll("td");
+        let individualMove = 0;
+        let individualExercise = 0;
+        let individualStand = 0;
+
         rowData.forEach(function(data) {
           const dataParts = data.innerText.split("/");
           if (dataParts.length === 3) {
-            totalMove += parseInt(dataParts[0], 10);
-            totalExercise += parseInt(dataParts[1], 10);
-            totalStand += parseInt(dataParts[2], 10);
+            individualMove += parseInt(dataParts[0], 10);
+            individualExercise += parseInt(dataParts[1], 10);
+            individualStand += parseInt(dataParts[2], 10);
           }
         });
+
+        // Update individual totals for each row
+        row.cells[row.cells.length - 3].textContent = individualMove;
+        row.cells[row.cells.length - 2].textContent = individualExercise;
+        row.cells[row.cells.length - 1].textContent = individualStand;
+
+        // Add individual totals to group totals
+        totalMove += individualMove;
+        totalExercise += individualExercise;
+        totalStand += individualStand;
       });
 
       // Update group total table with calculated totals
