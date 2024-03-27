@@ -1,219 +1,174 @@
+
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head>
-  <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.122.0">
-  <title>Brodin's Challenge</title>
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/heroes/">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-  <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-  <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
-  <meta name="theme-color" content="#712cf9">
-  <style>
-    /* Styles unchanged */
-  </style>
-  <!-- Custom styles for this template -->
-  <link href="https://getbootstrap.com/docs/5.3/examples/heroes/heroes.css" rel="stylesheet">
-</head>
-<body>
-<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-  <!-- Dropdown code unchanged -->
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Heroes · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="heroes.css" rel="stylesheet">
+  </head>
+  <body>
+    
 <main>
   <h1 class="visually-hidden">Heroes examples</h1>
+
   <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis">Brodin's Challenge &#129380;</h1>
+    <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Centered hero</h1>
     <div class="col-lg-6 mx-auto">
-      <table class="table table-dark">
-        <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">1</th>
-          <th scope="col">2</th>
-          <th scope="col">3</th>
-          <th scope="col">4</th>
-          <th scope="col">5</th>
-          <th scope="col">6</th>
-          <th scope="col">7</th>
-          <th scope="col">Total Move</th>
-          <th scope="col">Total Exercise</th>
-          <th scope="col">Total Stand</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Table rows with individual data -->
-        <tr>
-          <th scope="row">Eric</th>
-          <td>1599/220/13</td>
-          <td>2083/165/16</td>
-          <td>2286/265/15</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>3682</td>
-          <td>385</td>
-          <td>29</td>
-        </tr>
-        <tr>
-          <th scope="row">Corey</th>
-          <td>1635/136/16</td>
-          <td>808/109/16</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>1635</td>
-          <td>136</td>
-          <td>16</td>
-        </tr>
-        <tr>
-          <th scope="row">Brian</th>
-          <td>1641/122/17</td>
-          <td>1241/96/12</td>
-          <td>1247/111/18</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>2882</td>
-          <td>218</td>
-          <td>29</td>
-        </tr>
-        <tr>
-          <th scope="row">Hyllarie</th>
-          <td>692/89/12</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>692</td>
-          <td>89</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <th scope="row">Cheno</th>
-          <td>921/96/10</td>
-          <td>826/96/10</td>
-          <td>1021/102/10</td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td> - </td>
-          <td>1747</td>
-          <td>192</td>
-          <td>20</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- Group total table -->
-    <div class="col-lg-6 mx-auto">
-      <table class="table table-dark">
-        <thead>
-        <tr>
-          <th scope="col">Group Total Move</th>
-          <th scope="col">Group Total Exercise</th>
-          <th scope="col">Group Total Stand</th>
-        </tr>
-        </thead>
-        <tbody id="groupTotalBody">
-        <!-- Group total rows will be dynamically added here -->
-        </tbody>
-      </table>
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
     </div>
   </div>
+
   <div class="b-example-divider"></div>
-  <!-- Calorie progress bar -->
-  <div class="px-4 pt-5 my-5 text-center">
-    <h1 class="display-4 fw-bold text-body-emphasis">50,000 Calorie Progress &#127947;</h1></h1>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Centered screenshot</h1>
     <div class="col-lg-6 mx-auto">
-      <div class="progress">
-        <div id="calorieProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
       </div>
     </div>
   </div>
-  <!-- Exercise progress bar -->
+
+  <div class="b-example-divider"></div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
+        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <hr class="my-4">
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container my-5">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">Border hero with cropped image and shadows</h1>
+        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Dark mode hero</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
+          <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="b-example-divider mb-0"></div>
-  <div class="px-4 pt-5 my-5 text-center">
-    <h1 class="display-4 fw-bold text-body-emphasis">5,000 Exercise Minutes &#128267;</h1>
-    <div class="col-lg-6 mx-auto">
-      <div class="progress">
-        <div id="exerciseProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
 </main>
-<script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Function to calculate group totals and update progress bars
-    function updateGroupTotal() {
-      // Initialize variables to hold total move, exercise, and stand
-      let totalMove = 0;
-      let totalExercise = 0;
-      let totalStand = 0;
 
-      // Loop through each row of the table to sum individual data
-      document.querySelectorAll("tbody tr").forEach(function(row) {
-        const rowData = row.querySelectorAll("td");
-        rowData.forEach(function(data) {
-          const dataParts = data.innerText.split("/");
-          if (dataParts.length === 3) {
-            totalMove += parseInt(dataParts[0], 10);
-            totalExercise += parseInt(dataParts[1], 10);
-            totalStand += parseInt(dataParts[2], 10);
-          }
-        });
-      });
 
-      // Update group total table with calculated totals
-      document.getElementById("groupTotalBody").innerHTML = `
-        <tr>
-          <td>${totalMove}</td>
-          <td>${totalExercise}</td>
-          <td>${totalStand}</td>
-        </tr>
-      `;
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-      // Update progress bars
-      const calorieProgress = document.getElementById("calorieProgressBar");
-      const exerciseProgress = document.getElementById("exerciseProgressBar");
-      const calorieTarget = 50000; // Target calorie
-      const exerciseTarget = 5000; // Target exercise minutes
-
-      // Calculate percentage progress
-      const caloriePercentage = (totalMove / calorieTarget) * 100;
-      const exercisePercentage = (totalExercise / exerciseTarget) * 100;
-
-      // Update progress bar styles
-      calorieProgress.style.width = `${caloriePercentage}%`;
-      calorieProgress.setAttribute("aria-valuenow", Math.min(caloriePercentage, 100)); // Make sure it doesn't exceed 100
-      exerciseProgress.style.width = `${exercisePercentage}%`;
-      exerciseProgress.setAttribute("aria-valuenow", Math.min(exercisePercentage, 100)); // Make sure it doesn't exceed 100
-    }
-
-    // Call the updateGroupTotal function initially
-    updateGroupTotal();
-
-    // Listen for changes in the table (if any)
-    document.querySelector("tbody").addEventListener("change", function() {
-      updateGroupTotal();
-    });
-  });
-</script>
-</body>
+      
+  </body>
 </html>
