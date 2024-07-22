@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Protocols</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .jumbotron {
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .topo-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .topo-1 { background-image: url('https://example.com/topo-everest.jpg'); }
+        .topo-2 { background-image: url('https://example.com/topo-grandcanyon.jpg'); }
+        .topo-3 { background-image: url('https://example.com/topo-kilimanjaro.jpg'); }
+        .topo-4 { background-image: url('https://example.com/topo-alps.jpg'); }
+
+        .topo-active {
+            opacity: 1;
+        }
+
+        .jumbotron-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fitness Protocols</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#running">Running</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cycling">Cycling</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lifting">Lifting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nutrition">Nutrition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hydration">Hydration</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="topo-background topo-1"></div>
+        <div class="topo-background topo-2"></div>
+        <div class="topo-background topo-3"></div>
+        <div class="topo-background topo-4"></div>
+        <div class="container jumbotron-content">
+            <h1 class="display-4">Fitness Protocols</h1>
+            <p class="lead">Track and optimize your advanced fitness training</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="running" class="mb-5">
+            <h2>Running Protocol</h2>
+            <p>Details about the running protocol go here.</p>
+        </section>
+
+        <section id="cycling" class="mb-5">
+            <h2>Cycling Protocol</h2>
+            <p>Details about the cycling protocol go here.</p>
+        </section>
+
+        <section id="lifting" class="mb-5">
+            <h2>Lifting Protocol</h2>
+            <p>Details about the lifting protocol go here.</p>
+        </section>
+
+        <section id="nutrition" class="mb-5">
+            <h2>Nutrition</h2>
+            <p>Information about nutrition for advanced fitness training goes here.</p>
+        </section>
+
+        <section id="hydration" class="mb-5">
+            <h2>Hydration</h2>
+            <p>Information about hydration strategies goes here.</p>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Fitness Protocols. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const topoBackgrounds = document.querySelectorAll('.topo-background');
+        let currentIndex = 0;
+
+        function cycleBackgrounds() {
+            topoBackgrounds[currentIndex].classList.remove('topo-active');
+            currentIndex = (currentIndex + 1) % topoBackgrounds.length;
+            topoBackgrounds[currentIndex].classList.add('topo-active');
+        }
+
+        // Initialize the first background
+        topoBackgrounds[0].classList.add('topo-active');
+
+        // Cycle backgrounds every 5 seconds
+        setInterval(cycleBackgrounds, 5000);
+    </script>
+</body>
+</html>
