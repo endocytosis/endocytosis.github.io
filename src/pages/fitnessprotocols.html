@@ -4,78 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Protocols</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .jumbotron {
-            position: relative;
-            overflow: hidden;
-            padding: 4rem 1rem;
-            margin-bottom: 2rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-
-        .topo-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .topo-1 { background-image: url('src/pages/map1.png'); }
-        .topo-2 { background-image: url('https://example.com/topo-grandcanyon.jpg'); }
-        .topo-3 { background-image: url('https://example.com/topo-kilimanjaro.jpg'); }
-        .topo-4 { background-image: url('https://example.com/topo-alps.jpg'); }
-
-        .topo-active {
-            opacity: 1;
+        h1, h2 {
+            color: #333;
         }
-
-        .jumbotron-content {
-            position: relative;
-            z-index: 1;
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 1em;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        .nav a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Fitness Protocols</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#running">Running</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cycling">Cycling</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#lifting">Lifting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#saturday">Saturday</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nutrition">Nutrition</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#hydration">Hydration</a></li>
-                </ul>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Endocytosis</div>
+            <div class="nav">
+                <a href="#fitness">Fitness</a>
+                <a href="#search">Search</a>
+                <a href="#mode">Mode</a>
             </div>
         </div>
-    </nav>
 
-    <div class="jumbotron">
-        <div class="topo-background topo-1"></div>
-        <div class="topo-background topo-2"></div>
-        <div class="topo-background topo-3"></div>
-        <div class="topo-background topo-4"></div>
-        <div class="container jumbotron-content">
-            <h1 class="display-4">Fitness Protocols</h1>
-        </div>
-    </div>
+        <h1>Fitness</h1>
 
-    <div class="container">
-        <section id="running" class="mb-5">
+        <section id="supplements">
+            <h2>Supplements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Supplement</th>
+                        <th>Protein</th>
+                        <th>Sodium</th>
+                        <th>Potassium</th>
+                        <th>Magnesium</th>
+                        <th>Calcium</th>
+                        <th>Zinc</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TL Whey Protein Isolate (4 scoops, 148 g)</td>
+                        <td>112 g</td>
+                        <td>0</td>
+                        <td>632 mg</td>
+                        <td>0</td>
+                        <td>400 mg</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>TL Bulk Black (1 scoop, 21.3 g)</td>
+                        <td>0</td>
+                        <td>180 mg</td>
+                        <td>130 mg</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10 mg</td>
+                    </tr>
+                    <tr>
+                        <td>TL ZMO</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>144 mg</td>
+                        <td>0</td>
+                        <td>11 mg</td>
+                    </tr>
+                    <tr>
+                        <td>LMNT</td>
+                        <td>0</td>
+                        <td>1000 mg</td>
+                        <td>200 mg</td>
+                        <td>60 mg</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td>112 g</td>
+                        <td>1180 mg</td>
+                        <td>962 mg</td>
+                        <td>204 mg</td>
+                        <td>400 mg</td>
+                        <td>21 mg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <h2>Exercise Protocols</h2>
+
+        <section id="running">
             <h2>Running Protocol</h2>
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Day</th>
@@ -108,9 +191,9 @@
             </table>
         </section>
 
-        <section id="cycling" class="mb-5">
+        <section id="cycling">
             <h2>Cycling Protocol</h2>
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Day</th>
@@ -138,9 +221,9 @@
             </table>
         </section>
 
-        <section id="lifting" class="mb-5">
+        <section id="lifting">
             <h2>Lifting Protocol</h2>
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Day</th>
@@ -172,7 +255,7 @@
             </table>
         </section>
 
-        <section id="saturday" class="mb-5">
+        <section id="saturday">
             <h2>Saturday Protocol</h2>
             <ul>
                 <li>1 mile run and 2000 m row, repeat 5x</li>
@@ -181,9 +264,9 @@
             </ul>
         </section>
 
-        <section id="nutrition" class="mb-5">
+        <section id="nutrition">
             <h2>Nutrition</h2>
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Workout</th>
@@ -207,9 +290,9 @@
             </table>
         </section>
 
-        <section id="hydration" class="mb-5">
+        <section id="hydration">
             <h2>Hydration</h2>
-            <table class="table table-striped">
+            <table>
                 <thead>
                     <tr>
                         <th>Workout</th>
@@ -229,29 +312,5 @@
             </table>
         </section>
     </div>
-
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Fitness Protocols. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const topoBackgrounds = document.querySelectorAll('.topo-background');
-        let currentIndex = 0;
-
-        function cycleBackgrounds() {
-            topoBackgrounds[currentIndex].classList.remove('topo-active');
-            currentIndex = (currentIndex + 1) % topoBackgrounds.length;
-            topoBackgrounds[currentIndex].classList.add('topo-active');
-        }
-
-        // Initialize the first background
-        topoBackgrounds[0].classList.add('topo-active');
-
-        // Cycle backgrounds every 5 seconds
-        setInterval(cycleBackgrounds, 5000);
-    </script>
 </body>
 </html>
